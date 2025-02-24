@@ -10,6 +10,8 @@ import { Footer } from "@/components/ui/footer";
 import Index from "./pages/Index";
 import Articles from "./pages/Articles";
 import Create from "./pages/Create";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +41,8 @@ const AppRoutes = () => {
         <Route path="/" element={<Index />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/create" element={<Create />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </PageTransition>

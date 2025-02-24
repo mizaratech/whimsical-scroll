@@ -57,7 +57,7 @@ const Index = () => {
                 <Link to="/articles">Start Reading</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/create">Create Article</Link>
+                <Link to="/register">Join Now</Link>
               </Button>
             </div>
           </motion.div>
