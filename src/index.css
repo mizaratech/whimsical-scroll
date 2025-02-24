@@ -62,5 +62,6 @@
 
 .hero-section::before {
   content: '';
-  @apply absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,transparent)] dark:bg-grid-slate-700/25;
+  @apply absolute inset-0 bg-gradient-to-b from-secondary/50 to-transparent opacity-70;
 }
+
