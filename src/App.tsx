@@ -6,8 +6,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "@/components/ui/navbar";
+import { Footer } from "@/components/ui/footer";
 import Index from "./pages/Index";
 import Articles from "./pages/Articles";
+import Create from "./pages/Create";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +38,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/articles" element={<Articles />} />
+        <Route path="/create" element={<Create />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </PageTransition>
@@ -46,9 +49,12 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <BrowserRouter>
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-background flex flex-col">
           <Navbar />
-          <AppRoutes />
+          <main className="flex-1">
+            <AppRoutes />
+          </main>
+          <Footer />
         </div>
       </BrowserRouter>
       <Toaster />
